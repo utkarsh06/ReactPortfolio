@@ -7,6 +7,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import { NavbarBrand } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav'
 
+
+//Components
+import Footer from './components/Footer'
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -36,17 +40,18 @@ class App extends React.Component {
     return (
       <Router>
         <Container className = "p-0" fluid = {true}>
-          <navbar className = "border-bottom">
+          <Navbar className = "border-bottom" bg = "transparent" expand = "lg">
             <Navbar.Brand>Utkarsh Gaur </Navbar.Brand>
-            <Navbar.Toggle aria-controls = "navbar-toggle"></Navbar.Toggle>
+            <Navbar.Toggle className = "boeder-0" aria-controls = "navbar-toggle"></Navbar.Toggle>
             <Navbar.Collapse aria-controls = "navbar-toggle">
-              <Nav>
+              <Nav className = "ml-auto">
                 <Link className = "nav-link" to = "">Home</Link>
                 <Link className = "nav-link" to = "/about">About</Link>
                 <Link className = "nav-link" to = "/contact">Contact</Link>
               </Nav>
             </Navbar.Collapse>
-          </navbar>
+          </Navbar>
+          <Footer />
         </Container>
       </Router>
 
