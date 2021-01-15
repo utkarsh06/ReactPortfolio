@@ -1,9 +1,11 @@
 import React from 'react';
+import Branding from '../components/Branding';
 
 function home(props){
 
     return (
-        <p>home page works</p>
+        <Branding title = {props.title} subTitle = {props.subTitle} text = {props.text}/>
+
     );
 }
 
