@@ -5,14 +5,14 @@ import Column from 'react-bootstrap/Col'
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
 function Branding(props){
-
+    console.log(props.title);
     return(
-        <Jumbotron>
-            <Container>
-                <Row>
-                    <Column>
-                        { props.title && <h2>{props.title}</h2> }
-                        { props.subTitle && <h3>{props.subTitle}</h3> }
+        <Jumbotron className = "bg-transparent">
+            <Container fluid = {true} >
+                <Row className = "justify-content-left py-5">
+                    <Column md = {8} sm = {12}>
+                        { props.title && <h1 className = "display-1 font-weight-bolder">{props.title}</h1> }
+                        { props.subTitle && <h2 className = "display-4 font-weight-light">{props.subTitle}</h2> }
                         { props.text && <h4>{props.text}</h4> }
                     </Column>
                 </Row>
