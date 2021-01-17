@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.u-template {
+  margin: 20px;
+}
+
+
+.u-template-image {
+  border-radius: 10px;
+  width: 300px;
+  height: 480px;
+  box-shadow: 0px 0px 3px 1px #ccc
+
+}
+
+u-template-info{
+  margin-top: 10px;
+  min-height: 100px;
+
+}
+
+.u-template.title{
+  font-size: 24px;
+  margin:0px;
+
+}
+
+.u-template-subTitle{
+  font-size: 15px;
+  margin: 0px;
+}
+

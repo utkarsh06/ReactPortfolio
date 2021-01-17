@@ -1,17 +1,17 @@
 import React from 'react';
 
 
-import social from '../assets/images/michael-dziedzic--Rc6usOigMk-unsplash.jpg';
-import compiler from '../assets/images/nathan-dumlao-71u2fOofI-U-unsplash.jpg';
+import compiler from '../assets/images/michael-dziedzic--Rc6usOigMk-unsplash.jpg';
+import social from '../assets/images/nathan-dumlao-71u2fOofI-U-unsplash.jpg';
 import github from '../assets/images/richy-great-MAYEkmn7G6E-unsplash.jpg';
 import Template from '../components/Template';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 
-
 class Carousel extends React.Component {
     constructor(props) {
         super(props);
+        this.title = "PROJECTS";
         this.state = {
             items: [
                 {
@@ -19,9 +19,9 @@ class Carousel extends React.Component {
                     title: "Social Media website",
                     subTitle: "CS490",
                     technology: "PHP, MySQL",
-                    img: "",
+                    img: social,
                     link: "https://github.com/utkarsh06/CS490",
-                    hover: ""
+                    selected: false
 
                 },
                 {
@@ -29,9 +29,9 @@ class Carousel extends React.Component {
                     title: "Interpreter",
                     subTitle: "CS280",
                     technology: "C++",
-                    img: "",
+                    img: compiler,
                     link: "https://github.com/utkarsh06/Programming-Languages",
-                    hover: ""
+                    selected: false
 
                 },
                 {
@@ -39,9 +39,9 @@ class Carousel extends React.Component {
                     title: "And More",
                     subTitle: "Check out my github",
                     technology: "",
-                    img: "",
+                    img: github,
                     link: "https://github.com/utkarsh06",
-                    hover: ""
+                    selected: false
 
                 }
                 
@@ -54,8 +54,8 @@ class Carousel extends React.Component {
         let items = [...this.state.items];
         items[id].selected = items[id].selected ? false : true;
         items.forEach(item => {
-            if(items.id !== id){
-                items.selected = false;
+            if(item.id !== id){
+                item.selected = false;
             }
         });
 
@@ -66,7 +66,7 @@ class Carousel extends React.Component {
 
     makeItems = (items) => {
         return items.map(item => {
-            return < Template item = {item} onClick = {(e => this.handleTemplateClick(item.id,e))} key = {item.id} />
+            return < Template item = {item} click = {(e => this.handleTemplateClick(item.id,e))} key = {item.id} />
         })
     }
 
@@ -76,6 +76,7 @@ class Carousel extends React.Component {
     render(){
         return(
             <Container fluid = {true}>
+                <Row> { this.title && <h2 className = " justify-content-center">{this.title}</h2> } </Row>
                 <Row className = "justify-content-around">
                     {this.makeItems(this.state.items)}
                 </Row>

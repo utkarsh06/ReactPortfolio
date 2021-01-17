@@ -5,7 +5,6 @@ import Column from 'react-bootstrap/Col'
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
 function Branding(props){
-    console.log(props.title);
     return(
         <Jumbotron className = "bg-transparent">
             <Container fluid = {true} >
