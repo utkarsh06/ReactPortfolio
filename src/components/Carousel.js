@@ -6,8 +6,8 @@ import social from '../assets/images/nathan-dumlao-71u2fOofI-U-unsplash.jpg';
 import github from '../assets/images/richy-great-MAYEkmn7G6E-unsplash.jpg';
 import Template from '../components/Template';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class Carousel extends React.Component {
     constructor(props) {
@@ -23,7 +23,6 @@ class Carousel extends React.Component {
                     img: social,
                     link: "https://github.com/utkarsh06/CS490",
                     selected: false
-
                 },
                 {
                     id: 1,
@@ -88,6 +87,6 @@ class Carousel extends React.Component {
             </Container>
         );    
     }
-} 
+}
 
 export default Carousel;
