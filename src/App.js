@@ -13,7 +13,6 @@ import Footer from './components/Footer'
 import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';
-import Template from './components/Template';
 
 class App extends React.Component {
   constructor(props) {
@@ -32,6 +31,7 @@ class App extends React.Component {
       },
       about: {
         title: "About me",
+        img: ""
       },
       contact: {
         title: "Contact me",

@@ -3,7 +3,6 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
 import ReactRoundImage from "react-rounded-image";
 
 import ProfileImage from "../assets/images/UtkarshGaur.jpg";
@@ -13,7 +12,7 @@ return (
         
         <Container fluid = {true}>
             <Row clasName = "justify-content-center">
-                <Col className = "justify-content-center">
+                <Col className = "justify-content-right">
                     <ReactRoundImage image = {ProfileImage} />
                 </Col>
                 <Col>
